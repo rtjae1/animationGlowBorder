@@ -29,3 +29,101 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.loader {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #ffdd67);
+}
+
+.loader:hover {
+  background: var(--secondaryColor);
+  box-shadow: 0 0 5px var(--secondaryColor), 0 0 25px var(--secondaryColor), 0 0 50px var(--secondaryColor), 0 0 100px var(--secondaryColor);
+}
+
+.loader span {
+  position: absolute;
+  display: block;
+}
+
+.loader span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(90deg, transparent, #ffdd67);
+  animation: animate1 1s linear infinite;
+  animation-delay: 0s;
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+.loader span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(270deg, transparent, #ffdd67);
+  animation: animate3 1s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+
+  100% {
+    right: 100%;
+  }
+}
+
+.loader span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #ffdd67);
+  animation: animate2 2s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+
+.loader span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 40px;
+  height: 100%;
+  background: linear-gradient(0deg, transparent, #ffdd67);
+  animation: animate4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+
+  100% {
+    bottom: 100%;
+  }
+}
